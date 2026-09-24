@@ -3,444 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Антипригарные тефлоновые коврики — купить в интернет-магазине по выгодной цене | De-Pack</title>
+<title>Антипригарные тефлоновые коврики — купить по выгодной цене | De-Pack</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,700&subset=cyrillic&display=swap" rel="stylesheet">
 <style>
-/* === RESET === */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-font-smoothing: antialiased; }
-body {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
-  color: #111;
-  background: #fff;
-  line-height: 21px;
-  font-size: 14px;
-}
-a { color: #111; text-decoration: none; }
-img { max-width: 100%; height: auto; }
-ul { list-style: disc; padding-left: 40px; }
-li { margin-bottom: 8px; }
-strong { font-weight: 700; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased}
+body{font-family:'Rubik',sans-serif;font-weight:300;color:#111;background:#fff;line-height:21px;font-size:14px}
+a{color:#111;text-decoration:none}
+img{max-width:100%;height:auto}
+ul{list-style:disc;padding-left:40px}
+li{margin-bottom:8px}
+strong{font-weight:700}
 
-/* === FIXED CONTAINER === */
-.fixed { margin: 0 auto; padding: 0 15px; }
+/* FIXED */
+.fixed{margin:0 auto;padding:0 15px}
 
-/* === HEADER === */
-.site-header {
-  background: #d3d3d3;
-  border-bottom: 1px solid #00A0E3;
-  padding: 20px 0;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 30;
-}
-.site-header-inner {
-  display: flow-root;
-  padding: 0 5px 0 15px;
-}
-.site-branding {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: auto;
-  padding: 0 40px;
-  text-align: center;
-  justify-content: center;
-}
-.site-logotype {
-  display: block;
-  margin-right: 0;
-}
-.site-logotype img { height: 50px; }
-.site-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #00A0E3;
-  margin-bottom: 5px;
-  line-height: 1.3;
-}
-.site-title a { color: #00A0E3; }
-.site-description {
-  display: none;
-  font-size: 16px;
-  font-weight: 400;
-  color: #111;
-  margin-top: 0;
-  line-height: 1.3;
-}
-.header-html-1 {
-  display: block;
-  width: 200px;
-  float: left;
-  margin-top: 15px;
-  padding: 0;
-  text-align: center;
-}
-.header-html-2 {
-  display: block;
-  width: 200px;
-  float: right;
-  margin-top: 15px;
-  padding: 0;
-  text-align: center;
-}
-.header_adres .number {
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-.header_adres .number a { color: #444; }
-.header_adres a {
-  font-size: 14px;
-  color: #3960FF;
-  display: block;
-  margin-bottom: 2px;
-  text-decoration: underline;
-}
-.header_adres .time_work {
-  font-size: 14px;
-  color: #111;
-  margin-bottom: 4px;
-}
-.header_adres a[href^="mailto:"] {
-  color: #444;
-  text-decoration: none;
-}
-.gorod {
-  font-size: 14px;
-  color: #111;
-  line-height: 21px;
-  margin-bottom: 4px;
-}
-.header_html-2 .number { font-size: 14px; }
-.header_html-2 .number a { color: #444; text-decoration: none; }
+/* HAMBURGER */
+.humburger{display:none;position:relative;cursor:pointer;width:24px;height:16px}
+.humburger span{position:absolute;display:block;width:24px;height:2px;background:#333;left:0;transition:.3s}
+.humburger span:first-child{top:0}
+.humburger span:nth-child(2){top:7px}
+.humburger span:last-child{bottom:0}
 
-/* === SITE CONTENT === */
-.site-content { padding: 0 15px 20px; background: #fff; }
-.site-content-inner {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
-}
+/* HEADER */
+.site-header{position:relative;padding:20px 0;background:#d3d3d3;border-bottom:1px solid #00A0E3;margin-bottom:30px;z-index:30}
+.site-header-inner{position:relative;display:block;padding:0 5px 0 15px}
+.site-branding{display:flex;flex-wrap:wrap;text-align:center;justify-content:center;padding:0 40px;width:auto}
+.site-logotype{display:block;margin-right:1.3rem}
+.site-logotype img{height:50px;max-height:100px}
+.site-title{font-size:1.4em;margin:0 0 5px;font-weight:700;line-height:1.3;color:#111}
+.site-title a{color:#111;text-decoration:none}
+.site-description{display:none;margin:0;font-size:.9em;line-height:1.3;color:#111}
+.header-html-1,.header-html-2{display:block;width:200px;float:left;text-align:center;margin-top:15px;padding:0}
+.header-html-2{float:right}
+.header_adres .number{font-size:14px;margin-bottom:4px}
+.header_adres .number a{color:#444;text-decoration:none}
+.header_adres a{font-size:14px;color:#3960FF;display:block;margin-bottom:2px;text-decoration:underline}
+.header_adres .time_work{font-size:14px;color:#111;margin-bottom:4px}
+.header_adres a[href^="mailto:"]{color:#444;text-decoration:none}
+.gorod{font-size:14px;color:#111;line-height:21px;margin-bottom:4px}
+.header_html-2 .number{font-size:14px}
+.header_html-2 .number a{color:#444;text-decoration:none}
+.header-cart__link{display:inline-block;text-decoration:none;font-size:.95em;border-radius:3em;transition:.2s;color:#111;white-space:nowrap;padding:.5em .8em}
+.header-cart__link:hover{background:#fff}
+.header-search{display:none}
+.header-search--compact .header-search-ico{cursor:pointer;padding:.5em .8em}
+.header-search--compact .header-search-ico::before{content:"🔍";font-size:1.3em;vertical-align:sub}
+.search-form{position:relative}
+.search-form .search-field{padding:6px 10px;border:1px solid #ddd;font-family:'Rubik',sans-serif;font-size:14px}
+.search-form .search-submit{display:none}
 
-/* === CONTENT AREA === */
-.content-area {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  position: relative;
-}
-.site-main { width: 100%; }
+/* SHOW CATALOG BUTTON (mobile) */
+.catalog-btn-mobile{display:block;margin:0 15px 15px;padding:10px 20px;border:1px solid #333;background:#fff;font-family:'Rubik',sans-serif;font-size:14px;font-weight:400;color:#111;cursor:pointer;text-align:center}
+.catalog-btn-mobile:hover{background:#f5f5f5}
 
-/* === BREADCRUMB === */
-.woocommerce-breadcrumb {
-  font-size: 12.6px;
-  font-weight: 300;
-  color: #91A6BA;
-  margin-bottom: 10px;
-  opacity: 0.8;
-}
-.woocommerce-breadcrumb a { color: #91A6BA; }
+/* SITE CONTENT */
+.site-content{padding:0 15px 20px;background:#fff}
+.site-content-inner{display:flex;flex-wrap:wrap;flex-direction:row;width:100%}
 
-/* === PAGE TITLE === */
-.page-title {
-  font-size: 22.75px;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 20px;
-  line-height: 1.1;
-}
+/* CONTENT AREA */
+.content-area{display:block;width:100%;padding-left:0;position:relative}
+.site-main{width:100%}
 
-/* === RESULT COUNT + SORTING === */
-.shop-sorting {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0;
-}
-.woocommerce-result-count {
-  font-size: 12.6px;
-  font-weight: 300;
-  color: #91A6BA !important;
-  margin: 0 0 15px;
-  line-height: 1.5;
-}
-.woocommerce-ordering select {
-  font-family: 'Rubik', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-}
+/* BREADCRUMB */
+.woocommerce-breadcrumb{font-size:12.6px;font-weight:300;color:#91A6BA;margin-bottom:10px;opacity:.8}
+.woocommerce-breadcrumb a{color:#91A6BA}
 
-/* === PRODUCT GRID === */
-.shop-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -10px;
-}
-.shop-grid--columns-3 > .shop-item {
-  width: 100%;
-}
+/* PAGE TITLE */
+.page-title{font-size:22.75px;font-weight:700;color:#111;margin-bottom:20px;line-height:1.1}
 
-/* === SHOP ITEM === */
-.shop-item {
-  display: block;
-  padding: 0 10px;
-  margin-bottom: 20px;
-  position: relative;
-}
-.shop-item__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 9.8px;
-  overflow: hidden;
-  flex-direction: column;
-}
-.shop-item__image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  overflow: clip;
-}
-.shop-item__icons {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 5;
-  display: flex;
-  gap: 5px;
-}
-.shop-item__icons span {
-  width: 28px;
-  height: 28px;
-  background: rgba(255,255,255,0.85);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-.shop-item:hover .shop-item__icons span { opacity: 1; }
-.shop-item__badges { position: absolute; z-index: 2; }
-.shop-item__title {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 4.9px;
-}
-.shop-item__title a { color: #111 !important; }
-.shop-item__title a:hover { color: #00A0E3; }
-.shop-item__price {
-  font-size: 14px;
-  font-weight: 800;
-  color: #111;
-  line-height: 21px;
-}
-.shop-item__price bdi { font-weight: 800; }
-.shop-item__buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  z-index: 5;
-  position: relative;
-  width: 100%;
-}
-.shop-item__buttons a {
-  display: block;
-  background: #3960FF;
-  color: #fff !important;
-  text-align: center;
-  padding: 6.3px 12.6px;
-  font-size: 12.6px;
-  font-weight: 400;
-  line-height: 1.3;
-  border-radius: 18.9px;
-  border: 1px solid transparent;
-  transition: background 0.2s;
-  position: relative;
-}
-.shop-item__buttons a:hover { background: #2b4dd4; color: #fff; }
+/* SORTING */
+.shop-sorting{display:flex;align-items:center;justify-content:space-between;margin-bottom:0}
+.woocommerce-result-count{font-size:12.6px;font-weight:300;color:#91A6BA!important;margin:0 0 15px;line-height:1.5}
+.woocommerce-ordering select{font-family:'Rubik',sans-serif;font-size:14px;font-weight:300;padding:.5em 1.5em;border:1px solid #ddd;background:#fff;color:#111}
 
-/* === CONTENT TEXT === */
-.term-description { margin: 0; }
-.term-description h2 {
-  font-size: 20.125px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #111;
-  margin: 0 0 20.125px;
-}
-.term-description h3 {
-  font-size: 17.5px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: #111;
-  margin: 0 0 17.5px;
-}
-.term-description p {
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #111;
-}
-.term-description ul {
-  margin: 0 0 16px;
-  padding-left: 40px;
-}
-.term-description li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #111;
-}
-.term-description a { color: #3B60FF; }
-.term-description a:hover { color: #00A0E3; }
-.ds-markdown-paragraph {
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #111;
-}
-.term-description img.aligncenter {
-  display: block;
-  margin: 30px auto;
-  max-width: 100%;
-}
+/* PRODUCT GRID */
+.shop-grid{display:flex;flex-wrap:wrap;margin:0 -10px}
+.shop-grid--columns-3>.shop-item{width:100%}
 
-/* === SIDEBAR === */
-.widget-area { display: block; width: 100%; padding-bottom: 30px; }
+/* SHOP ITEM */
+.shop-item{display:block;padding:0 10px;margin-bottom:20px;position:relative}
+.shop-item__image{display:flex;align-items:center;justify-content:center;position:relative;margin-bottom:9.8px;overflow:hidden;flex-direction:column}
+.shop-item__image img{width:100%;height:auto;object-fit:contain;overflow:clip}
+.shop-item__icons{position:absolute;top:5px;right:5px;z-index:5;display:flex;gap:5px}
+.shop-item__icons span{width:28px;height:28px;background:rgba(255,255,255,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;opacity:0;transition:opacity .2s}
+.shop-item:hover .shop-item__icons span{opacity:1}
+.shop-item__badges{position:absolute;z-index:2}
+.shop-item__title{font-size:14px;font-weight:700;line-height:1.4;margin-bottom:4.9px}
+.shop-item__title a{color:#111!important}
+.shop-item__title a:hover{color:#00A0E3}
+.shop-item__price{font-size:14px;font-weight:800;color:#111;line-height:21px}
+.shop-item__price bdi{font-weight:800}
+.shop-item__buttons{display:flex;flex-direction:column;align-items:center;margin-top:10px;z-index:5;position:relative;width:100%}
+.shop-item__buttons a{display:block;background:#3960FF;color:#fff!important;text-align:center;padding:6.3px 12.6px;font-size:12.6px;font-weight:400;line-height:1.3;border-radius:18.9px;border:1px solid transparent;transition:background .2s;position:relative}
+.shop-item__buttons a:hover{background:#2b4dd4;color:#fff}
 
-/* === FOOTER === */
-.site-footer {
-  background: #f8f8f8;
-  padding: 50px 0 0;
-  margin-top: 0;
-  font-size: 12.6px;
-  font-weight: 300;
-  color: #111;
-  line-height: 18.9px;
-}
-.site-footer-inner {
-  padding: 0 15px;
-  width: 100%;
-}
-.site-footer .logo { text-align: center; margin-bottom: 10px; }
-.site-footer .logo img { height: 40px; opacity: 0.7; }
-.site-footer .copyright {
-  display: none;
-  margin-top: 10px;
-  color: #111;
-  font-size: 13px;
-  font-weight: 300;
-}
-.footer-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: 100%;
-}
-.site-footer .h2-header { font-size: 15px; font-weight: 500; margin-bottom: 10px; }
-.site-footer .h2-header a { color: #111; }
-.site-footer a {
-  color: #00A0E3;
-  display: block;
-  margin-bottom: 5px;
-  font-size: 13px;
-  font-weight: 700;
-  text-align: center;
-  width: 100%;
-}
-.site-footer a:hover { color: #2b4dd4; }
-.site-footer .tel {
-  font-size: 13px;
-  font-weight: 300;
-  color: #111 !important;
-  margin-bottom: 0;
-}
-.site-footer .work-time { color: #999; font-size: 12px; margin-bottom: 8px; text-align: center; }
-.site-footer .gorod { color: #999; font-size: 12px; margin-bottom: 8px; line-height: 1.4; text-align: center; }
-.footer-bottom {
-  margin-top: 20px;
-  padding: 15px 0 0;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  color: #999;
-  font-size: 12px;
-}
+/* CONTENT TEXT */
+.term-description{margin:0}
+.term-description h2{font-size:20.125px;font-weight:700;line-height:1.2;color:#111;margin:0 0 20.125px}
+.term-description h3{font-size:17.5px;font-weight:700;line-height:1.3;color:#111;margin:0 0 17.5px}
+.term-description p{margin-bottom:16px;font-size:14px;font-weight:300;color:#111}
+.term-description ul{margin:0 0 16px;padding-left:40px}
+.term-description li{margin-bottom:8px;font-size:14px;font-weight:300;color:#111}
+.term-description a{color:#3B60FF}
+.term-description a:hover{color:#00A0E3}
+.ds-markdown-paragraph{margin-bottom:16px;font-size:14px;font-weight:300;color:#111}
+.term-description img.aligncenter{display:block;margin:30px auto;max-width:100%}
+
+/* SIDEBAR */
+.widget-area{display:block;width:100%;padding-bottom:30px}
+.widget-area--mobile{display:block;order:1}
+
+/* FOOTER */
+.site-footer{background:#f8f8f8;padding:50px 0 0;margin-top:0;font-size:12.6px;font-weight:300;color:#111;line-height:18.9px}
+.site-footer-inner{padding:0 15px}
+.footer-inner-item-main{display:flex;flex-wrap:wrap}
+.footer-inner-item{display:inline-block;vertical-align:top;width:100%;padding:10px 0}
+.site-footer .logo{text-align:center;margin-bottom:10px}
+.site-footer .logo img{height:40px;opacity:.7}
+.site-footer .copyright{margin-top:10px;color:#111;font-size:13px;font-weight:300}
+.copyright.mobile-hide{display:none}
+.site-footer .h2-header{font-size:15px;font-weight:500;margin-bottom:10px}
+.site-footer .h2-header a{color:#111}
+.site-footer a{color:#00A0E3;display:block;margin-bottom:5px;font-size:13px;font-weight:700;text-align:center;width:100%}
+.site-footer a:hover{color:#2b4dd4}
+.site-footer .tel{font-size:13px;font-weight:300;color:#111!important;margin-bottom:0}
+.site-footer .work-time{color:#999;font-size:12px;margin-bottom:8px;text-align:center}
+.site-footer .gorod{color:#999;font-size:12px;margin-bottom:8px;line-height:1.4;text-align:center}
+.footer-bottom{margin-top:20px;padding:15px 0 0;border-top:1px solid #ddd;text-align:center;color:#999;font-size:12px}
+.mobile-show{display:none}
 
 /* ============================================
    RESPONSIVE — MOBILE-FIRST (min-width)
    ============================================ */
-
-/* 576px+ */
-@media (min-width: 576px) {
-  .site-content { padding: 0 20px 20px; }
-  .site-header-inner { padding: 0 20px; }
-  .site-footer-inner { padding: 0 20px; }
+@media(min-width:576px){
+  .site-content{padding:0 20px 20px}
+  .site-header-inner{padding:0 20px}
+  .site-footer-inner{padding:0 20px}
 }
-
-/* 768px+ */
-@media (min-width: 768px) {
-  body { font-size: 16px; }
-  .site-content { padding: 0 45px 40px; }
-  .site-header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 45px;
-  }
-  .site-branding { padding-right: 0; text-align: left; justify-content: flex-start; width: auto; }
-  .site-title { margin: 0 0 5px; font-size: 18px; }
-  .site-description { display: block; }
-  .site-logotype { margin-right: 1.3rem; }
-  .header-html-1, .header-html-2 { margin-top: 0; width: auto; float: none; padding: 0 15px; text-align: left; }
-  .site-footer-inner { padding: 0 45px; }
-  .page-title { font-size: 39px; }
-  .term-description h2 { font-size: 31px; }
-  .term-description h3 { font-size: 25px; }
-  .shop-grid--columns-3 > .shop-item { width: 33.333%; }
-  .shop-item__title { font-size: 16px; }
-  .shop-item__buttons { flex-direction: row; }
-  .shop-item__buttons a { padding: 7.2px 21.6px; font-size: 14.4px; border-radius: 21.6px; }
-  .woocommerce-result-count { font-size: 14.4px; }
-  .site-footer .copyright { display: block; }
-  .site-footer a { text-align: left; }
-  .site-footer .work-time { text-align: left; }
-  .site-footer .gorod { text-align: left; }
+@media(min-width:768px){
+  body{font-size:16px}
+  .site-content{padding:0 45px 40px}
+  .site-header-inner{display:flex;justify-content:space-between;align-items:center;padding:0 45px}
+  .site-branding{padding-right:0;text-align:left;justify-content:flex-start;width:auto}
+  .site-description{display:block}
+  .site-title{margin:0 0 5px;font-size:2em}
+  .site-logotype{margin-right:1.3rem}
+  .header-html-1,.header-html-2{margin-top:0;width:auto;float:none;padding:0 15px;text-align:left}
+  .humburger{display:none!important}
+  .header-search{display:none!important}
+  .catalog-btn-mobile{display:none}
+  .site-footer-inner{padding:0 45px}
+  .page-title{font-size:39px}
+  .term-description h2{font-size:31px}
+  .term-description h3{font-size:25px}
+  .shop-grid--columns-3>.shop-item{width:33.333%}
+  .shop-item__title{font-size:16px}
+  .shop-item__buttons{flex-direction:row}
+  .shop-item__buttons a{padding:7.2px 21.6px;font-size:14.4px;border-radius:21.6px}
+  .woocommerce-result-count{font-size:14.4px}
+  .footer-inner-item{width:25%}
+  .copyright.mobile-hide{display:block}
+  .mobile-show{display:none}
+  .site-footer a{text-align:left}
+  .site-footer .work-time{text-align:left}
+  .site-footer .gorod{text-align:left}
 }
-
-/* 992px+ */
-@media (min-width: 992px) {
-  .content-area {
-    max-width: calc(100% - 300px);
-    flex: 0 0 calc(100% - 300px);
-    padding-right: 30px;
-  }
-  .widget-area { display: block; width: 300px; flex: 0 0 300px; padding-bottom: 30px; }
-  .site-branding { padding-left: 0; }
+@media(min-width:992px){
+  .content-area{max-width:calc(100% - 300px);flex:0 0 calc(100% - 300px);padding-right:30px}
+  .widget-area{display:block;width:300px;flex:0 0 300px;padding-bottom:30px}
+  .site-branding{padding-left:0}
 }
-
-/* 1200px+ */
-@media (min-width: 1200px) {
-  .content-area { padding-right: 70px; }
-  .site-footer-inner { max-width: 1190px; }
+@media(min-width:1200px){
+  .content-area{padding-right:70px}
+  .site-footer-inner{max-width:1190px}
 }
 </style>
 </head>
 <body>
 
 <!-- Header -->
-<header class="site-header">
+<header class="site-header site-header--style-1 full">
 <div class="site-header-inner fixed">
+  <div class="humburger js-humburger"><span></span><span></span><span></span></div>
   <div class="site-branding">
     <div class="site-logotype">
       <a href="#"><img src="https://de-pack.ru/wp-content/uploads/2025/03/logo111.png" alt="De-Pack"></a>
@@ -466,8 +212,21 @@ strong { font-weight: 700; }
       <a href="tel:+74732582668">+7 (473) 258-26-68</a>
     </div>
   </div>
+  <div style="clear:both"></div>
+  <a href="#" class="header-cart__link header-compare">♡</a>
+  <a href="#" class="header-cart__link header-favorite">⚖</a>
+  <div class="header-search header-search--compact">
+    <span class="header-search-ico js-header-search-ico"></span>
+    <form role="search" class="search-form">
+      <input type="search" class="search-field" placeholder="Поиск..." name="s">
+      <button type="submit" class="search-submit">→</button>
+    </form>
+  </div>
 </div>
 </header>
+
+<!-- Show Catalog (mobile) -->
+<a href="#" class="catalog-btn-mobile">Показать каталог</a>
 
 <!-- Site Content -->
 <div class="site-content">
@@ -477,19 +236,16 @@ strong { font-weight: 700; }
 <div class="content-area">
 <main class="site-main">
 
-  <!-- Breadcrumb -->
   <nav class="woocommerce-breadcrumb">
-    <a href="#">Главная страница</a> &rsaquo;
-    <a href="#">Расходные материалы для оборудования</a> &rsaquo;
-    Тефлоновые коврики
+    <a href="#">Главная</a> &rsaquo;
+    <a href="#">Каталог товаров</a> &rsaquo;
+    <a href="#">Расходные материалы для промышленного и упаковочного оборудования</a> &rsaquo;
   </nav>
 
-  <!-- Page Header -->
   <header class="woocommerce-products-header">
     <h1 class="woocommerce-products-header__title page-title">Тефлоновые коврики</h1>
   </header>
 
-  <!-- Sorting -->
   <div class="shop-sorting">
     <p class="woocommerce-result-count">Показано товаров - 4</p>
     <form class="woocommerce-ordering" method="get">
@@ -504,20 +260,18 @@ strong { font-weight: 700; }
     </form>
   </div>
 
-  <!-- Products Grid -->
   <div class="shop-grid shop-grid--columns-3">
 
     <div class="shop-item">
       <div class="shop-item-inner">
         <div class="shop-item__image">
           <div class="shop-item__image-inner">
-            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик" title="Тефлоновый коврик фото">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик">
             <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
           </div>
           <div class="shop-item__icons">
             <span title="Добавить в избранное">♡</span>
-            <span title="Быстрый просмотр">👁</span>
-            <span title="Добавить в сравнение">⚖</span>
+            <span title="Сравнить">⚖</span>
           </div>
         </div>
         <div class="shop-item__badges"></div>
@@ -530,13 +284,12 @@ strong { font-weight: 700; }
       <div class="shop-item-inner">
         <div class="shop-item__image">
           <div class="shop-item__image-inner">
-            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик" title="Тефлоновый коврик фото">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик">
             <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
           </div>
           <div class="shop-item__icons">
             <span title="Добавить в избранное">♡</span>
-            <span title="Быстрый просмотр">👁</span>
-            <span title="Добавить в сравнение">⚖</span>
+            <span title="Сравнить">⚖</span>
           </div>
         </div>
         <div class="shop-item__badges"></div>
@@ -549,13 +302,12 @@ strong { font-weight: 700; }
       <div class="shop-item-inner">
         <div class="shop-item__image">
           <div class="shop-item__image-inner">
-            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль" title="Тефлоновый коврик гриль фото">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль">
             <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
           </div>
           <div class="shop-item__icons">
             <span title="Добавить в избранное">♡</span>
-            <span title="Быстрый просмотр">👁</span>
-            <span title="Добавить в сравнение">⚖</span>
+            <span title="Сравнить">⚖</span>
           </div>
         </div>
         <div class="shop-item__badges"></div>
@@ -568,13 +320,12 @@ strong { font-weight: 700; }
       <div class="shop-item-inner">
         <div class="shop-item__image">
           <div class="shop-item__image-inner">
-            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль" title="Тефлоновый коврик гриль фото">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль">
             <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
           </div>
           <div class="shop-item__icons">
             <span title="Добавить в избранное">♡</span>
-            <span title="Быстрый просмотр">👁</span>
-            <span title="Добавить в сравнение">⚖</span>
+            <span title="Сравнить">⚖</span>
           </div>
         </div>
         <div class="shop-item__badges"></div>
@@ -585,7 +336,6 @@ strong { font-weight: 700; }
 
   </div>
 
-  <!-- Term Description -->
   <div class="term-description">
     <h2>Тефлоновые (PTFE) коврики: особенности и выгоды покупки</h2>
     <p>Тефлоновые коврики — уникальный промышленный материал, обладающий выдающимися физико-химическими свойствами. Он широко применяется в пищевом производстве, поскольку не влияет на вкус и состав продуктов.</p>
@@ -633,21 +383,20 @@ strong { font-weight: 700; }
 </main>
 </div>
 
-<!-- Sidebar -->
 <aside class="widget-area widget-area--desktop"></aside>
 
 </div>
 </div>
 
 <!-- Footer -->
-<footer class="site-footer">
-<div class="site-footer-inner">
-  <div class="footer-columns">
-    <div>
+<footer class="site-footer site-footer--style-gray full">
+<div class="site-footer-inner fixed">
+  <div class="footer-inner-item-main">
+    <div class="footer-inner-item">
       <div class="logo"><img src="https://de-pack.ru/wp-content/uploads/2024/06/logo_href.png" alt="De-Pack"></div>
-      <div class="copyright">&copy; 2026 Упаковочное оборудование и материалы «Де-Пак»</div>
+      <div class="copyright mobile-hide">&copy; 2026 Упаковочное оборудование и материалы «Де-Пак»</div>
     </div>
-    <div>
+    <div class="footer-inner-item">
       <div class="h2-header"><a href="#">Каталог упаковочного оборудования</a></div>
       <a href="#">Расходные материалы для оборудования</a>
       <a href="#">Расходные материалы для маркировки</a>
@@ -655,13 +404,13 @@ strong { font-weight: 700; }
       <a href="#">Принтеры маркираторы</a>
       <a href="#">Весовые дозаторы</a>
     </div>
-    <div>
+    <div class="footer-inner-item">
       <a href="#">Контакты</a>
       <a href="#">О компании</a>
       <a href="#">Сервис</a>
       <a href="#">Акции</a>
     </div>
-    <div>
+    <div class="footer-inner-item">
       <a href="tel:+74958230798" class="tel">8 (495) 823-07-98</a>
       <a href="#">Заказать звонок</a>
       <div class="work-time">Пн-Пт с 09:00 до 18:00</div>
@@ -669,9 +418,12 @@ strong { font-weight: 700; }
       <a href="mailto:de-pack@mail.ru">de-pack@mail.ru</a>
     </div>
   </div>
-</div>
-<div class="footer-bottom">
-  Цены носят справочный характер и не являются публичной офертой. Наличие интересующего товара и его актуальную стоимость просьба уточнять по телефону или по электронной почте: de-pack@mail.ru
+  <div class="mobile-show">
+    <div class="copyright">&copy; 2026 Упаковочное оборудование и материалы «De-Pack»</div>
+  </div>
+  <div class="footer-bottom">
+    Цены носят справочный характер и не являются публичной офертой. Наличие интересующего товара и его актуальную стоимость просьба уточнять по телефону или по электронной почте: de-pack@mail.ru
+  </div>
 </div>
 </footer>
 
