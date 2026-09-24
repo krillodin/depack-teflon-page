@@ -7,113 +7,417 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,700&subset=cyrillic&display=swap" rel="stylesheet">
 <style>
+/* === RESET === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Rubik', sans-serif; color: #111; background: #fff; line-height: 1.6; }
+html { -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  color: #111;
+  background: #fff;
+  line-height: 24px;
+  font-size: 16px;
+}
 a { color: #111; text-decoration: none; }
-a:hover { color: #0056A7; }
 img { max-width: 100%; height: auto; }
+ul { list-style: disc; padding-left: 40px; }
+li { margin-bottom: 8px; }
+strong { font-weight: 700; }
+
+/* === CONTAINER === */
 .fixed { max-width: 1265px; margin: 0 auto; padding: 0 45px; }
 
-/* Header */
-.site-header { background: #d3d3d3; padding: 20px 0; margin-bottom: 30px; }
-.site-header-inner { display: flex; align-items: flex-start; gap: 0; }
-.site-branding { display: flex; align-items: center; width: 401px; flex-shrink: 0; }
-.site-logotype { display: block; margin-right: 20.8px; }
+/* === HEADER === */
+.site-header {
+  background: rgb(211, 211, 211);
+  border-bottom: 1px solid #00A0E3;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 30;
+}
+.site-header-inner {
+  display: flex;
+  align-items: flex-start;
+}
+.site-branding {
+  display: flex;
+  align-items: center;
+  width: 401px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.site-logotype {
+  display: block;
+  margin-right: 20.8px;
+}
 .site-logotype img { height: 50px; }
-.site-branding__body { display: block; }
-.site-title { font-size: 14px; font-weight: 500; }
-.site-title a { color: #111; }
-.site-description { font-size: 12px; color: #999; margin-top: 2px; }
-.header-html-1 { width: 320px; flex-shrink: 0; padding: 0 15px; }
-.header-html-2 { width: 320px; flex-shrink: 0; padding: 0 15px; }
-.header_adres .number { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
-.header_adres .number a { color: #111; }
-.header_adres a { font-size: 13px; color: #0056A7; display: block; margin-bottom: 2px; }
-.header_adres .time_work { font-size: 12px; color: #999; margin-bottom: 4px; }
-.header_html-2 .gorod { font-size: 13px; color: #444; line-height: 1.4; margin-bottom: 4px; }
-.header_html-2 .number { font-size: 14px; }
-.header_html-2 .number a { color: #111; }
-.header-search { margin-left: auto; }
+.site-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00A0E3;
+}
+.site-title a { color: #00A0E3; }
+.site-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111;
+  margin-top: 2px;
+}
+.header-html-1 {
+  width: 320px;
+  flex-shrink: 0;
+  padding: 0 15px;
+  min-width: 200px;
+}
+.header-html-2 {
+  width: 320px;
+  flex-shrink: 0;
+  padding: 0 15px;
+  min-width: 200px;
+}
+.header_adres .number {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.header_adres .number a {
+  color: #444;
+}
+.header_adres a {
+  font-size: 16px;
+  color: #3960FF;
+  display: block;
+  margin-bottom: 2px;
+  text-decoration: underline;
+}
+.header_adres .time_work {
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 4px;
+}
+.header_adres a[href^="mailto:"] {
+  color: #444;
+  text-decoration: none;
+}
+.gorod {
+  font-size: 16px;
+  color: #111;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+.header_html-2 .number {
+  font-size: 16px;
+}
+.header_html-2 .number a {
+  color: #444;
+  text-decoration: none;
+}
 
-/* Breadcrumb */
-.woocommerce-breadcrumb { font-size: 12.8px; color: #91A6BA; margin-bottom: 10px; }
-.woocommerce-breadcrumb a { color: #91A6BA; }
+/* === SITE CONTENT === */
+.site-content { max-width: 1265px; margin: 0 auto; padding: 0 45px; }
+.site-content-inner { display: flex; width: 1190px; }
 
-/* Page Layout: two columns */
-.site-main { display: flex; gap: 0; }
-.content-area { width: 800px; padding-left: 70px; flex-shrink: 0; }
-.widget-area { width: 300px; flex-shrink: 0; padding-bottom: 30px; }
+/* === CONTENT AREA === */
+.content-area {
+  width: 800px;
+  padding-left: 70px;
+  flex-shrink: 0;
+}
+.site-main {
+  width: 730px;
+}
 
-/* Page title */
-.page-title { font-size: 39px; font-weight: 500; color: #111; margin-bottom: 40px; }
-.woocommerce-result-count { font-size: 14.4px; color: #91A6BA; margin-bottom: 20px; }
+/* === BREADCRUMB === */
+.woocommerce-breadcrumb {
+  font-size: 12.8px;
+  font-weight: 300;
+  color: #91A6BA;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.woocommerce-breadcrumb a {
+  color: #91A6BA;
+}
 
-/* Products */
-.woocommerce-ordering { float: right; margin-bottom: 20px; }
-.woocommerce-ordering select { font-family: 'Rubik', sans-serif; font-size: 14px; padding: 5px 10px; border: 1px solid #ddd; }
+/* === PAGE TITLE === */
+.page-title {
+  font-size: 39px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 40px;
+  line-height: 42.9px;
+}
 
-ul.products { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 30px; margin-bottom: 40px; padding: 0; }
-li.product { display: block; padding: 0 20px; margin-bottom: 30px; }
+/* === RESULT COUNT + SORTING === */
+.shop-sorting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.woocommerce-result-count {
+  font-size: 14.4px;
+  font-weight: 300;
+  color: #91A6BA;
+  margin: 0;
+}
+.woocommerce-ordering select {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+}
 
-.shop-item__image { display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 11.2px; }
-.shop-item__image img { width: 187px; height: 187px; object-fit: contain; }
-.shop-item__buttons { position: absolute; bottom: 0; left: 0; right: 0; opacity: 0; transition: opacity 0.2s; }
-li.product:hover .shop-item__buttons { opacity: 1; }
-.shop-item__buttons a { display: block; background: #0056A7; color: #fff; text-align: center; padding: 10px 15px; font-size: 14px; font-weight: 500; }
-.shop-item__buttons a:hover { background: #004080; color: #fff; }
+/* === PRODUCT GRID === */
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px 40px;
+}
+.shop-grid--columns-3 > .shop-item {
+  width: 33.333%;
+}
 
-.shop-item__title { font-size: 16px; margin-bottom: 5.6px; min-height: 90px; }
+/* === SHOP ITEM === */
+.shop-item {
+  display: block;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.shop-item-inner { }
+.shop-item__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 11.2px;
+  overflow: hidden;
+}
+.shop-item__image-inner { }
+.shop-item__image img {
+  width: 186.656px;
+  height: 186.656px;
+  object-fit: contain;
+  overflow: clip;
+}
+.shop-item__icons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 5;
+  display: flex;
+  gap: 5px;
+}
+.shop-item__icons span {
+  width: 28px;
+  height: 28px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.shop-item:hover .shop-item__icons span { opacity: 1; }
+.shop-item__badges {
+  position: absolute;
+  z-index: 2;
+}
+.shop-item__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  margin-bottom: 5.6px;
+  min-height: 89.5px;
+}
 .shop-item__title a { color: #111; }
-.shop-item__title a:hover { color: #0056A7; }
-.shop-item__price { font-size: 16px; font-weight: 800; color: #111; }
+.shop-item__title a:hover { color: #00A0E3; }
+.shop-item__price {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111;
+  line-height: 24px;
+}
+.shop-item__price bdi { font-weight: 800; }
 
-/* Content */
-.content-area h2 { font-size: 22px; font-weight: 500; margin: 30px 0 15px; color: #111; }
-.content-area h3 { font-size: 18px; font-weight: 500; margin: 25px 0 12px; color: #111; }
-.content-area p { margin-bottom: 15px; font-size: 15px; color: #555; }
-.content-area ul { margin: 10px 0 15px 20px; }
-.content-area li { margin-bottom: 8px; font-size: 15px; color: #555; }
-.content-area a { color: #0056A7; }
-.faq-item { margin-bottom: 20px; }
-.faq-item p:first-child { font-weight: 500; color: #111; }
-.faq-item p:last-child { color: #666; margin-top: 5px; }
-.content-image { text-align: center; margin: 30px 0; }
-.content-image img { max-width: 100%; }
+/* === SHOP ITEM BUTTONS — ALWAYS VISIBLE === */
+.shop-item__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  z-index: 5;
+  position: relative;
+}
+.shop-item__buttons a {
+  display: block;
+  background: #3960FF;
+  color: #fff;
+  text-align: center;
+  padding: 7.2px 21.6px;
+  font-size: 14.4px;
+  font-weight: 400;
+  line-height: 18.72px;
+  border-radius: 21.6px;
+  border: 1px solid transparent;
+  transition: background 0.2s;
+}
+.shop-item__buttons a:hover {
+  background: #2b4dd4;
+  color: #fff;
+}
 
-/* Sidebar */
-.widget-area .widget { margin-bottom: 30px; }
-.widget-area .widget-title { font-size: 18px; font-weight: 500; margin-bottom: 15px; color: #111; border-bottom: 2px solid #0056A7; padding-bottom: 8px; }
-.widget-area ul { list-style: none; }
-.widget-area li { padding: 6px 0; font-size: 14px; border-bottom: 1px solid #f0f0f0; }
-.widget-area li a { color: #444; }
-.widget-area li a:hover { color: #0056A7; }
+/* === CONTENT === */
+.content-area h2 {
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 37.2px;
+  color: #111;
+  margin: 0 0 24px;
+}
+.content-area h3 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 32.5px;
+  color: #111;
+  margin: 0 0 24px;
+}
+.content-area p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #111;
+}
+.content-area ul {
+  margin: 0 0 16px;
+  padding-left: 40px;
+}
+.content-area li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #111;
+}
+.content-area a {
+  color: #91A6BA;
+}
+.content-area a:hover {
+  color: #00A0E3;
+}
+.ds-markdown-paragraph {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #111;
+}
+.content-area img.aligncenter {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+}
 
-/* Footer */
-.site-footer { background: #f8f8f8; padding: 50px 0; margin-top: 50px; font-size: 14.4px; color: #111; }
-.site-footer-inner { display: block; }
-.footer-columns { display: grid; grid-template-columns: 1.5fr 1.5fr 1fr 1.5fr; gap: 30px; padding: 0 45px; max-width: 1265px; margin: 0 auto; }
+/* === SIDEBAR === */
+.widget-area {
+  width: 300px;
+  flex-shrink: 0;
+  padding-bottom: 30px;
+  max-width: 100%;
+}
+
+/* === TERM DESCRIPTION === */
+.term-description {
+  margin-top: 20px;
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: rgb(248, 248, 248);
+  padding: 50px 0;
+  margin-top: 50px;
+  font-size: 14.4px;
+  font-weight: 300;
+  color: #111;
+  line-height: 21.6px;
+}
+.site-footer-inner {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 45px;
+}
+.site-footer .logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
 .site-footer .logo img { height: 40px; opacity: 0.7; }
-.site-footer .copyright { margin-top: 10px; color: #999; font-size: 12px; }
-.site-footer .h2-header { font-size: 15px; font-weight: 500; margin-bottom: 10px; }
+.site-footer .copyright {
+  margin-top: 10px;
+  color: #111;
+  font-size: 13px;
+  font-weight: 300;
+}
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1.5fr;
+  gap: 30px;
+}
+.site-footer .h2-header {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 .site-footer .h2-header a { color: #111; }
-.site-footer a { color: #444; display: block; margin-bottom: 6px; font-size: 13px; }
-.site-footer a:hover { color: #0056A7; }
-.site-footer .tel { font-size: 16px; font-weight: 500; color: #111; margin-bottom: 8px; }
-.site-footer .work-time { color: #999; font-size: 12px; margin-bottom: 8px; }
-.site-footer .gorod { color: #999; font-size: 12px; margin-bottom: 8px; line-height: 1.4; }
-.footer-bottom { max-width: 1265px; margin: 20px auto 0; padding: 15px 45px 0; border-top: 1px solid #ddd; text-align: center; color: #999; font-size: 12px; }
+.site-footer a {
+  color: #00A0E3;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.site-footer a:hover { color: #2b4dd4; }
+.site-footer .tel {
+  font-size: 13px;
+  font-weight: 300;
+  color: #111;
+  margin-bottom: 8px;
+}
+.site-footer .work-time {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.site-footer .gorod {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.footer-bottom {
+  max-width: 1190px;
+  margin: 20px auto 0;
+  padding: 15px 45px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
 
+/* === RESPONSIVE === */
 @media (max-width: 900px) {
-  .site-main { flex-direction: column; }
+  .site-content-inner { flex-direction: column; }
   .content-area { width: 100%; padding-left: 0; }
   .widget-area { width: 100%; }
-  ul.products { grid-template-columns: repeat(2, 1fr); }
+  .shop-grid--columns-3 > .shop-item { width: 50%; }
   .footer-columns { grid-template-columns: 1fr 1fr; }
   .site-branding { width: auto; }
   .header-html-1, .header-html-2 { width: auto; }
 }
 @media (max-width: 500px) {
-  ul.products { grid-template-columns: 1fr; }
+  .shop-grid--columns-3 > .shop-item { width: 100%; }
+  .site-header-inner { flex-wrap: wrap; }
 }
 </style>
 </head>
@@ -150,176 +454,223 @@ li.product:hover .shop-item__buttons { opacity: 1; }
 </div>
 </header>
 
-<div class="fixed">
-
-<!-- Breadcrumb -->
-<nav class="woocommerce-breadcrumb">
-  <a href="#">Главная страница</a> &rsaquo;
-  <a href="#">Расходные материалы для оборудования</a> &rsaquo;
-  Тефлоновые коврики
-</nav>
-
-<div class="site-main">
+<!-- Site Content -->
+<div class="site-content">
+<div class="site-content-inner">
 
 <!-- Main Content -->
 <div class="content-area">
+<main class="site-main">
 
-  <h1 class="page-title">Тефлоновые коврики</h1>
+  <!-- Breadcrumb -->
+  <nav class="woocommerce-breadcrumb">
+    <a href="#">Главная страница</a> &rsaquo;
+    <a href="#">Расходные материалы для оборудования</a> &rsaquo;
+    Тефлоновые коврики
+  </nav>
 
-  <p class="woocommerce-result-count">Показано товаров - 4</p>
+  <!-- Page Header -->
+  <header class="woocommerce-products-header">
+    <h1 class="woocommerce-products-header__title page-title">Тефлоновые коврики</h1>
+  </header>
 
-  <ul class="products">
-
-    <li class="product">
-      <div class="shop-item__image">
-        <img src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик">
-        <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
-      </div>
-      <div class="shop-item__title"><a href="#">Коврик из тефлоновой лакоткани 600*800 мм, 130 мкм</a></div>
-      <div class="shop-item__price">590&nbsp;₽</div>
-    </li>
-
-    <li class="product">
-      <div class="shop-item__image">
-        <img src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик">
-        <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
-      </div>
-      <div class="shop-item__title"><a href="#">Тефлоновый коврик 400*600 мм , 130 мкм</a></div>
-      <div class="shop-item__price">300&nbsp;₽</div>
-    </li>
-
-    <li class="product">
-      <div class="shop-item__image">
-        <img src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль">
-        <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
-      </div>
-      <div class="shop-item__title"><a href="#">Тефлоновый коврик гриль из лакоткани 400*300 мм</a></div>
-      <div class="shop-item__price">320&nbsp;₽</div>
-    </li>
-
-    <li class="product">
-      <div class="shop-item__image">
-        <img src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль">
-        <div class="shop-item__buttons"><a href="#">Подробнее</a></div>
-      </div>
-      <div class="shop-item__title"><a href="#">Тефлоновый коврик гриль из лакоткани 400*600 мм</a></div>
-      <div class="shop-item__price">600&nbsp;₽</div>
-    </li>
-
-  </ul>
-
-  <h2>Тефлоновые (PTFE) коврики: особенности и выгоды покупки</h2>
-  <p>Тефлоновые коврики — уникальный промышленный материал, обладающий выдающимися физико-химическими свойствами. Он широко применяется в пищевом производстве, поскольку не влияет на вкус и состав продуктов.</p>
-
-  <h3>Почему предприятия выбирают многоразовые тефлоновые коврики?</h3>
-  <ul>
-    <li><strong>Высокая термостойкость и морозостойкость.</strong> Тефлоновые коврики сохраняют целостность при температурах от -70 °C до +260 °C. Подходят для выпекания, заморозки и других производственных процессов.</li>
-    <li><strong>Химическая инертность:</strong> не подвержены действию большинства кислот, щелочей и агрессивных реагентов.</li>
-    <li><strong>Антиадгезионные свойства:</strong> все загрязнения, в том числе жидкости и грязь, легко удаляются с поверхности глянцевого тефлонового коврика, что ускоряет очистку и повышает санитарные нормы.</li>
-    <li><strong>Механическая прочность:</strong> устойчивы к деформации и стиранию.</li>
-    <li><strong>Долговечность:</strong> в зависимости от характера производства и условий эксплуатации выдерживают до 1000 циклов.</li>
-  </ul>
-
-  <h3>Применение тефлоновых ковриков в разных промышленных отраслях</h3>
-  <p>Коврики с тефлоновым антипригарным покрытием идеальны для выпекания, замораживания, раскладки (расстойки) теста, кондитерского искусства (работы с карамелью, шоколадом и пр.), столов, конвейеров и т. д. Применимы как для духовки домашней плиты, так и для промышленных условий.</p>
-  <p>Они стоят недорого и прекрасно подходят для производства мясных снеков, сушки грибов и овощей и других процессов. Их не нужно смазывать жиром, что дополнительно снижает затраты.</p>
-  <p>Сейчас в наличии:</p>
-  <ul>
-    <li>тефлоновый коврик гриль 30 на 40 см;</li>
-    <li>тефлоновый коврик гриль 40 на 60 см.</li>
-  </ul>
-  <p>Толщина в 200 мкм обеспечивает прочность и долговечность изделия.</p>
-  <p>Не подходят представленные в каталоге варианты? Если вам нужен тефлоновый коврик 40 на 40 см, другой точный или нестандартный размер, а также специализированные модификации — например, перфорированные тефлоновые коврики (для лучшей вентиляции) или коврики с бортиками (для работы с жидкостями), — свяжитесь с нашим менеджером. Он подскажет, сможем ли мы изготовить изделие по вашим индивидуальным требованиям.</p>
-
-  <h3>Почему стоит купить тефлоновые коврики оптом? Главные преимущества такого решения</h3>
-  <ul>
-    <li><strong>Экономия средств.</strong> Коврики многоразовые, также при оптовых закупках цена за единицу товара ниже, увеличивается рентабельность производства.</li>
-    <li><strong>Стабильность поставок.</strong> Наличие постоянного запаса исключает перебои в снабжении и сбои в рабочем цикле.</li>
-    <li><strong>Логистическая выгода.</strong> Одноразово доставленная крупная партия устраняет частые транспортировки и упрощает управление складскими запасами.</li>
-    <li><strong>Конкурентные преимущества.</strong> Компании, своевременно пополняющие запасы тефлоновых ковриков, демонстрируют повышенную готовность к производству и рост прибыли.</li>
-  </ul>
-
-  <h3>Где и как купить тефлоновые коврики для предприятий?</h3>
-  <p>De-Pack — компания, для которой поставки производственных расходных материалов — одно из главных направлений работы. Мы быстро выполним оптовый заказ, поможем недорого купить необходимые товары.</p>
-  <p>Выберите надежные тефлоновые коврики, сделайте разумный вклад в развитие своего бизнеса! Наши специалисты подберут подходящий для вас товар. Получить консультацию и оформить заказ можно, позвонив нам либо оставив заявку на обратный звонок, или отправив запрос на электронную почту.</p>
-  <p><strong>Телефон для заказа и консультации: <a href="tel:+74958230798">8 (495) 823-07-98</a>.</strong></p>
-
-  <div class="content-image">
-    <img src="https://de-pack.ru/wp-content/uploads/2024/03/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA.jpg" alt="Тефлоновый коврик">
+  <!-- Sorting -->
+  <div class="shop-sorting">
+    <p class="woocommerce-result-count"> Показано товаров - 4</p>
+    <form class="woocommerce-ordering" method="get">
+      <select name="orderby" class="orderby">
+        <option value="menu_order" selected>Исходная сортировка</option>
+        <option value="popularity">По популярности</option>
+        <option value="rating">По рейтингу</option>
+        <option value="date">По новизне</option>
+        <option value="price">По возрастанию цены</option>
+        <option value="price-desc">По убыванию цен</option>
+      </select>
+    </form>
   </div>
 
-  <h2>Вопросы и ответы о тефлоновых ковриках</h2>
+  <!-- Products Grid -->
+  <div class="shop-grid shop-grid--columns-3">
 
-  <div class="faq-item">
-    <p><strong>Где можно недорого купить тефлоновый коврик для выпечки с доставкой?</strong></p>
-    <p>Если вы в России, то, конечно, у нас. Мы предлагаем товары напрямую от производителя. Это гарантирует выгодную цену и оперативную доставку. У нас вы найдете как стандартные размеры, так и возможность изготовления ковриков под ваши задачи.</p>
-  </div>
+    <!-- Product 1 -->
+    <div class="shop-item">
+      <div class="shop-item-inner">
+        <div class="shop-item__image">
+          <div class="shop-item__image-inner">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик" title="Тефлоновый коврик фото">
+            <div class="shop-item__buttons">
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="shop-item__icons">
+            <span title="Добавить в избранное">♡</span>
+            <span title="Быстрый просмотр">👁</span>
+            <span title="Добавить в сравнение">⚖</span>
+          </div>
+        </div>
+        <div class="shop-item__badges"></div>
+        <div class="shop-item__title"><a href="#">Коврик из тефлоновой лакоткани 600*800 мм, 130 мкм</a></div>
+        <div class="shop-item__price"><span class="price"><span class="woocommerce-Price-amount amount"><bdi>590&nbsp;<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></span></div>
+      </div>
+    </div>
 
-  <div class="faq-item">
-    <p><strong>Подойдет ли тефлоновый коврик для духовки плиты и можно ли его использовать на открытом огне?</strong></p>
-    <p>Для духовки — да. Однако это коврик именно для выпекания. Его нельзя использовать на открытом огне или электрических конфорках, так как это повредит материал.</p>
-  </div>
+    <!-- Product 2 -->
+    <div class="shop-item">
+      <div class="shop-item-inner">
+        <div class="shop-item__image">
+          <div class="shop-item__image-inner">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/03/acxdbj-1-500x500.jpg" alt="Тефлоновый коврик" title="Тефлоновый коврик фото">
+            <div class="shop-item__buttons">
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="shop-item__icons">
+            <span title="Добавить в избранное">♡</span>
+            <span title="Быстрый просмотр">👁</span>
+            <span title="Добавить в сравнение">⚖</span>
+          </div>
+        </div>
+        <div class="shop-item__badges"></div>
+        <div class="shop-item__title"><a href="#">Тефлоновый коврик 400*600 мм, 130 мкм</a></div>
+        <div class="shop-item__price"><span class="price"><span class="woocommerce-Price-amount amount"><bdi>300&nbsp;<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></span></div>
+      </div>
+    </div>
 
-  <div class="faq-item">
-    <p><strong>Ваши многоразовые коврики подходят только для выпечки или для других задач? Например, для термопресса или сублимации?</strong></p>
-    <p>Благодаря высокой термостойкости и антипригарным свойствам, многоразовый тефлоновый коврик действительно универсален. Помимо выпечки, его успешно применяют как коврик для термопресса в текстильной промышленности, для сушки продуктов и в других технологических процессах.</p>
-  </div>
+    <!-- Product 3 -->
+    <div class="shop-item">
+      <div class="shop-item-inner">
+        <div class="shop-item__image">
+          <div class="shop-item__image-inner">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль" title="Тефлоновый коврик гриль фото">
+            <div class="shop-item__buttons">
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="shop-item__icons">
+            <span title="Добавить в избранное">♡</span>
+            <span title="Быстрый просмотр">👁</span>
+            <span title="Добавить в сравнение">⚖</span>
+          </div>
+        </div>
+        <div class="shop-item__badges"></div>
+        <div class="shop-item__title"><a href="#">Тефлоновый коврик гриль из лакоткани 400*300 мм</a></div>
+        <div class="shop-item__price"><span class="price"><span class="woocommerce-Price-amount amount"><bdi>320&nbsp;<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></span></div>
+      </div>
+    </div>
 
-  <div class="faq-item">
+    <!-- Product 4 -->
+    <div class="shop-item">
+      <div class="shop-item-inner">
+        <div class="shop-item__image">
+          <div class="shop-item__image-inner">
+            <img width="500" height="500" src="https://de-pack.ru/wp-content/uploads/2024/04/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8-%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-500x500.jpg" alt="Тефлоновый коврик гриль" title="Тефлоновый коврик гриль фото">
+            <div class="shop-item__buttons">
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="shop-item__icons">
+            <span title="Добавить в избранное">♡</span>
+            <span title="Быстрый просмотр">👁</span>
+            <span title="Добавить в сравнение">⚖</span>
+          </div>
+        </div>
+        <div class="shop-item__badges"></div>
+        <div class="shop-item__title"><a href="#">Тефлоновый коврик гриль из лакоткани 400*600 мм</a></div>
+        <div class="shop-item__price"><span class="price"><span class="woocommerce-Price-amount amount"><bdi>600&nbsp;<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></span></div>
+      </div>
+    </div>
+
+  </div><!-- .shop-grid -->
+
+  <!-- Term Description / Text Content -->
+  <div class="term-description">
+    <h2>Тефлоновые (PTFE) коврики: особенности и выгоды покупки</h2>
+    <p>Тефлоновые коврики — уникальный промышленный материал, обладающий выдающимися физико-химическими свойствами. Он широко применяется в пищевом производстве, поскольку не влияет на вкус и состав продуктов.</p>
+    <h3>Почему предприятия выбирают многоразовые тефлоновые коврики?</h3>
+    <ul>
+      <li><strong>Высокая термостойкость и морозостойкость.</strong> Тефлоновые коврики сохраняют целостность при температурах от -70 °C до +260 °C. Подходят для выпекания, заморозки и других производственных процессов.</li>
+      <li><strong>Химическая инертность:</strong> не подвержены действию большинства кислот, щелочей и агрессивных реагентов.</li>
+      <li><strong>Антиадгезионные&nbsp; свойства:</strong> все загрязнения, в том числе жидкости и грязь, легко удаляются с поверхности глянцевого тефлонового коврика, что ускоряет очистку и повышает санитарные нормы.</li>
+      <li><strong>Механическая прочность:</strong> устойчивы к деформации и стиранию.</li>
+      <li><strong>Долговечность:</strong> в зависимости от характера производства и условий эксплуатации выдерживают до 1000 циклов.</li>
+    </ul>
+
+    <h3>Применение тефлоновых ковриков в разных промышленных отраслях</h3>
+    <p>Коврики с тефлоновым антипригарным покрытием идеальны для выпекания, замораживания, раскладки (расстойки) теста, кондитерского искусства (работы с карамелью, шоколадом и пр.), столов, конвейеров и т. д. Применимы как для духовки домашней плиты, так и для промышленных условий.</p>
+    <p>Они стоят недорого и прекрасно подходят для производства мясных снеков, сушки грибов и овощей и других процессов.&nbsp; Их не нужно смазывать жиром, что дополнительно снижает затраты.</p>
+    <p>Сейчас в наличии:</p>
+    <ul>
+      <li><a href="#">тефлоновый коврик гриль 30 на 40 см</a>;</li>
+      <li><a href="#">тефлоновый коврик гриль 40 на 60 см</a>.</li>
+    </ul>
+    <p>Толщина в 200 мкм обеспечивает прочность и долговечность изделия.</p>
+    <p>Не подходят представленные в каталоге варианты? Если вам нужен тефлоновый коврик 40 на 40 см, другой точный или нестандартный размер, а также специализированные модификации — например, перфорированные тефлоновые коврики (для лучшей вентиляции) или коврики с бортиками (для работы с жидкостями), — свяжитесь с нашим менеджером. Он подскажет, сможем ли мы изготовить изделие по вашим индивидуальным требованиям.</p>
+
+    <h3>Почему стоит купить тефлоновые коврики оптом? Главные преимущества такого решения</h3>
+    <ul>
+      <li><strong>Экономия средств.</strong> Коврики многоразовые, также при оптовых закупках цена за единицу товара ниже, увеличивается рентабельность производства.</li>
+      <li><strong>Стабильность поставок.</strong> Наличие постоянного запаса исключает перебои в снабжении и сбои в рабочем цикле.</li>
+      <li><strong>Логистическая выгода.</strong> Одноразово доставленная крупная партия устраняет частые транспортировки и упрощает управление складскими запасами.</li>
+      <li><strong>Конкурентные преимущества.</strong> Компании, своевременно пополняющие запасы тефлоновых ковриков, демонстрируют повышенную готовность к производству и рост прибыли.</li>
+    </ul>
+
+    <h3>Где и как купить тефлоновые коврики для предприятий?</h3>
+    <p>De-Pack — компания, для которой поставки производственных расходных материалов — одно из главных направлений работы. Мы быстро выполним оптовый заказ, поможем недорого купить необходимые товары.</p>
+    <p>Выберите надежные тефлоновые коврики, сделайте разумный вклад в развитие своего бизнеса! Наши специалисты подберут подходящий для вас товар. Получить консультацию и оформить заказ можно, позвонив нам либо оставив заявку на обратный звонок, или отправив запрос на электронную почту.</p>
+    <p><strong>Телефон для заказа и консультации:&nbsp;<a href="tel:+74958230798">8 (495) 823-07-98</a>.</strong></p>
+    <p><img class="aligncenter" src="https://de-pack.ru/wp-content/uploads/2024/03/%D0%A2%D0%B5%D1%84%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA.jpg" alt="Тефлоновый коврик" width="426" height="296"></p>
+
+    <!-- FAQ -->
+    <h2>Вопросы и ответы о тефлоновых ковриках</h2>
+    <p class="ds-markdown-paragraph"><strong>Где можно недорого купить тефлоновый коврик для выпечки с доставкой?</strong></p>
+    <p class="ds-markdown-paragraph">Если вы в России, то, конечно, у нас. Мы предлагаем товары напрямую от производителя. Это гарантирует выгодную цену и оперативную доставку. У нас вы найдете как стандартные размеры, так и возможность изготовления ковриков под ваши задачи.</p>
+    <p class="ds-markdown-paragraph"><strong>Подойдет ли тефлоновый коврик для духовки плиты и можно ли его использовать на открытом огне?</strong></p>
+    <p class="ds-markdown-paragraph">Для духовки — да. Однако это коврик именно для выпекания. Его нельзя использовать на открытом огне или электрических конфорках, так как это повредит материал.</p>
+    <p class="ds-markdown-paragraph"><strong>Ваши многоразовые коврики подходят только для выпечки или для других задач? Например, для термопресса или сублимации?</strong></p>
+    <p class="ds-markdown-paragraph">Благодаря высокой термостойкости и антипригарным свойствам, многоразовый тефлоновый коврик действительно универсален. Помимо выпечки, его успешно применяют как коврик для термопресса в текстильной промышленности, для сушки продуктов и в других технологических процессах.</p>
     <p><strong>Какой коврик лучше для производства: тефлоновый или силиконовый?</strong></p>
     <p>Для промышленных задач тефлоновый коврик — часто более выгодное и надежное решение. В отличие от силикона, он обладает более высокой термостойкостью, абсолютной антипригарностью гигиеничной глянцевой поверхности, не впитывает запахи. Если силикон подходит для малых объемов, то тефлон лучше для рентабельного и стабильного производства.</p>
   </div>
 
-</div>
+</main>
+</div><!-- .content-area -->
 
 <!-- Sidebar -->
-<aside class="widget-area">
-  <div class="widget">
-    <h3 class="widget-title">Каталог</h3>
-    <ul>
-      <li><a href="#">Расходные материалы для промышленного и упаковочного оборудования</a></li>
-      <li><a href="#">Расходные материалы для промышленной маркировки</a></li>
-      <li><a href="#">Запчасти для фасовочно-упаковочного оборудования</a></li>
-      <li><a href="#">Принтеры-маркираторы</a></li>
-      <li><a href="#">Весовые дозаторы</a></li>
-      <li><a href="#">Мультиголовочные дозаторы</a></li>
-      <li><a href="#">Фасовочно-упаковочное оборудование</a></li>
-      <li><a href="#">Конвейеры ленточные и вибропитатели</a></li>
-      <li><a href="#">Технологические линии</a></li>
-    </ul>
-  </div>
+<aside class="widget-area widget-area--desktop">
 </aside>
 
-</div><!-- .site-main -->
-</div><!-- .fixed -->
+</div><!-- .site-content-inner -->
+</div><!-- .site-content -->
 
 <!-- Footer -->
 <footer class="site-footer">
-<div class="footer-columns">
-  <div>
-    <div class="logo"><img src="https://de-pack.ru/wp-content/uploads/2024/06/logo_href.png" alt="De-Pack"></div>
-    <div class="copyright">© 2026 Упаковочное оборудование и материалы «Де-Пак»</div>
-  </div>
-  <div>
-    <div class="h2-header"><a href="#">Каталог упаковочного оборудования</a></div>
-    <a href="#">Расходные материалы для оборудования</a>
-    <a href="#">Расходные материалы для маркировки</a>
-    <a href="#">Запчасти для оборудования</a>
-    <a href="#">Принтеры маркираторы</a>
-    <a href="#">Весовые дозаторы</a>
-  </div>
-  <div>
-    <a href="#">Контакты</a>
-    <a href="#">О компании</a>
-    <a href="#">Сервис</a>
-    <a href="#">Акции</a>
-  </div>
-  <div>
-    <a href="tel:+74958230798" class="tel">8 (495) 823-07-98</a>
-    <a href="#">Заказать звонок</a>
-    <div class="work-time">Пн-Пт с 09:00 до 18:00</div>
-    <div class="gorod">Москва, Рязанский пр., д.10, стр.18,<br>помещ.11/8, оф. 8.3/917</div>
-    <a href="mailto:de-pack@mail.ru">de-pack@mail.ru</a>
+<div class="site-footer-inner">
+  <div class="footer-columns">
+    <div>
+      <div class="logo"><img src="https://de-pack.ru/wp-content/uploads/2024/06/logo_href.png" alt="De-Pack"></div>
+      <div class="copyright">© 2026 Упаковочное оборудование и материалы «Де-Пак»</div>
+    </div>
+    <div>
+      <div class="h2-header"><a href="#">Каталог упаковочного оборудования</a></div>
+      <a href="#">Расходные материалы для оборудования</a>
+      <a href="#">Расходные материалы для маркировки</a>
+      <a href="#">Запчасти для оборудования</a>
+      <a href="#">Принтеры маркираторы</a>
+      <a href="#">Весовые дозаторы</a>
+    </div>
+    <div>
+      <a href="#">Контакты</a>
+      <a href="#">О компании</a>
+      <a href="#">Сервис</a>
+      <a href="#">Акции</a>
+    </div>
+    <div>
+      <a href="tel:+74958230798" class="tel">8 (495) 823-07-98</a>
+      <a href="#">Заказать звонок</a>
+      <div class="work-time">Пн-Пт с 09:00 до 18:00</div>
+      <div class="gorod">Москва, Рязанский пр., д.10, стр.18,<br>помещ.11/8, оф. 8.3/917</div>
+      <a href="mailto:de-pack@mail.ru">de-pack@mail.ru</a>
+    </div>
   </div>
 </div>
 <div class="footer-bottom">
