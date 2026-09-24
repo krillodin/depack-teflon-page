@@ -15,7 +15,7 @@ body {
   font-weight: 300;
   color: #111;
   background: #fff;
-  line-height: 24px;
+  line-height: 21px;
   font-size: 14px;
 }
 a { color: #111; text-decoration: none; }
@@ -29,7 +29,7 @@ strong { font-weight: 700; }
 
 /* === HEADER === */
 .site-header {
-  background: rgb(211, 211, 211);
+  background: #d3d3d3;
   border-bottom: 1px solid #00A0E3;
   padding: 20px 0;
   margin-bottom: 30px;
@@ -46,6 +46,8 @@ strong { font-weight: 700; }
   flex-wrap: wrap;
   width: auto;
   padding: 0 40px;
+  text-align: center;
+  justify-content: center;
 }
 .site-logotype {
   display: block;
@@ -53,12 +55,14 @@ strong { font-weight: 700; }
 }
 .site-logotype img { height: 50px; }
 .site-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: #00A0E3;
+  margin-bottom: 5px;
 }
 .site-title a { color: #00A0E3; }
 .site-description {
+  display: none;
   font-size: 16px;
   font-weight: 400;
   color: #111;
@@ -70,6 +74,7 @@ strong { font-weight: 700; }
   float: left;
   margin-top: 15px;
   padding: 0;
+  text-align: center;
 }
 .header-html-2 {
   display: block;
@@ -77,21 +82,22 @@ strong { font-weight: 700; }
   float: right;
   margin-top: 15px;
   padding: 0;
+  text-align: center;
 }
 .header_adres .number {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 4px;
 }
 .header_adres .number a { color: #444; }
 .header_adres a {
-  font-size: 16px;
+  font-size: 14px;
   color: #3960FF;
   display: block;
   margin-bottom: 2px;
   text-decoration: underline;
 }
 .header_adres .time_work {
-  font-size: 16px;
+  font-size: 14px;
   color: #111;
   margin-bottom: 4px;
 }
@@ -100,12 +106,12 @@ strong { font-weight: 700; }
   text-decoration: none;
 }
 .gorod {
-  font-size: 16px;
+  font-size: 14px;
   color: #111;
-  line-height: 24px;
+  line-height: 21px;
   margin-bottom: 4px;
 }
-.header_html-2 .number { font-size: 16px; }
+.header_html-2 .number { font-size: 14px; }
 .header_html-2 .number a { color: #444; text-decoration: none; }
 
 /* === SITE CONTENT === */
@@ -122,12 +128,13 @@ strong { font-weight: 700; }
   display: block;
   width: 100%;
   padding-left: 0;
+  position: relative;
 }
 .site-main { width: 100%; }
 
 /* === BREADCRUMB === */
 .woocommerce-breadcrumb {
-  font-size: 12.8px;
+  font-size: 12.6px;
   font-weight: 300;
   color: #91A6BA;
   margin-bottom: 10px;
@@ -152,10 +159,10 @@ strong { font-weight: 700; }
   margin-bottom: 0;
 }
 .woocommerce-result-count {
-  font-size: 14.4px;
+  font-size: 12.6px;
   font-weight: 300;
   color: #91A6BA !important;
-  margin: 0;
+  margin: 0 0 15px;
 }
 .woocommerce-ordering select {
   font-family: 'Rubik', sans-serif;
@@ -169,7 +176,7 @@ strong { font-weight: 700; }
 .shop-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px 20px;
+  margin: 0 -10px;
 }
 .shop-grid--columns-3 > .shop-item {
   width: 100%;
@@ -187,12 +194,12 @@ strong { font-weight: 700; }
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 11.2px;
+  margin-bottom: 9.8px;
   overflow: hidden;
+  flex-direction: column;
 }
 .shop-item__image img {
   width: 100%;
-  max-width: 186.656px;
   height: auto;
   object-fit: contain;
   overflow: clip;
@@ -221,61 +228,64 @@ strong { font-weight: 700; }
 .shop-item:hover .shop-item__icons span { opacity: 1; }
 .shop-item__badges { position: absolute; z-index: 2; }
 .shop-item__title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 22.4px;
-  margin-bottom: 5.6px;
+  line-height: 1.4;
+  margin-bottom: 4.9px;
 }
 .shop-item__title a { color: #111 !important; }
 .shop-item__title a:hover { color: #00A0E3; }
 .shop-item__price {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 800;
   color: #111;
-  line-height: 24px;
+  line-height: 21px;
 }
 .shop-item__price bdi { font-weight: 800; }
 .shop-item__buttons {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 10px;
   z-index: 5;
   position: relative;
+  width: 100%;
 }
 .shop-item__buttons a {
   display: block;
   background: #3960FF;
   color: #fff !important;
   text-align: center;
-  padding: 7.2px 21.6px;
-  font-size: 14.4px;
+  padding: 6.3px 12.6px;
+  font-size: 12.6px;
   font-weight: 400;
-  line-height: 18.72px;
-  border-radius: 21.6px;
+  line-height: 18px;
+  border-radius: 18.9px;
   border: 1px solid transparent;
   transition: background 0.2s;
+  position: relative;
 }
 .shop-item__buttons a:hover { background: #2b4dd4; color: #fff; }
 
 /* === CONTENT TEXT === */
-.term-description { margin-top: 20px; }
+.term-description { margin: 20px 0 0; }
 .term-description h2 {
-  font-size: 24px;
+  font-size: 20.125px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   color: #111;
-  margin: 0 0 24px;
+  margin: 0 0 20.125px;
 }
 .term-description h3 {
-  font-size: 20px;
+  font-size: 17.5px;
   font-weight: 700;
   line-height: 1.3;
   color: #111;
-  margin: 0 0 24px;
+  margin: 0 0 17.5px;
 }
 .term-description p {
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #111;
 }
@@ -285,15 +295,15 @@ strong { font-weight: 700; }
 }
 .term-description li {
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #111;
 }
-.term-description a { color: #91A6BA; }
+.term-description a { color: #3B60FF; }
 .term-description a:hover { color: #00A0E3; }
 .ds-markdown-paragraph {
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #111;
 }
@@ -308,13 +318,13 @@ strong { font-weight: 700; }
 
 /* === FOOTER === */
 .site-footer {
-  background: rgb(248, 248, 248);
-  padding: 50px 0;
-  margin-top: 50px;
-  font-size: 14.4px;
+  background: #f8f8f8;
+  padding: 50px 0 0;
+  margin-top: 0;
+  font-size: 12.6px;
   font-weight: 300;
   color: #111;
-  line-height: 21.6px;
+  line-height: 18.9px;
 }
 .site-footer-inner {
   padding: 0 15px;
@@ -322,6 +332,7 @@ strong { font-weight: 700; }
 .site-footer .logo { text-align: center; margin-bottom: 10px; }
 .site-footer .logo img { height: 40px; opacity: 0.7; }
 .site-footer .copyright {
+  display: none;
   margin-top: 10px;
   color: #111;
   font-size: 13px;
@@ -340,6 +351,7 @@ strong { font-weight: 700; }
   margin-bottom: 5px;
   font-size: 13px;
   font-weight: 700;
+  text-align: center;
 }
 .site-footer a:hover { color: #2b4dd4; }
 .site-footer .tel {
@@ -348,8 +360,8 @@ strong { font-weight: 700; }
   color: #111 !important;
   margin-bottom: 8px;
 }
-.site-footer .work-time { color: #999; font-size: 12px; margin-bottom: 8px; }
-.site-footer .gorod { color: #999; font-size: 12px; margin-bottom: 8px; line-height: 1.4; }
+.site-footer .work-time { color: #999; font-size: 12px; margin-bottom: 8px; text-align: center; }
+.site-footer .gorod { color: #999; font-size: 12px; margin-bottom: 8px; line-height: 1.4; text-align: center; }
 .footer-bottom {
   margin-top: 20px;
   padding: 15px 0 0;
@@ -381,14 +393,23 @@ strong { font-weight: 700; }
     padding: 0 45px;
   }
   .site-branding { padding-right: 0; text-align: left; justify-content: flex-start; width: auto; }
-  .site-title { margin: 0; font-size: 2em; }
+  .site-title { margin: 0 0 5px; font-size: 18px; }
+  .site-description { display: block; }
   .site-logotype { margin-right: 1.3rem; }
-  .header-html-1, .header-html-2 { margin-top: 0; width: auto; float: none; padding: 0 15px; }
+  .header-html-1, .header-html-2 { margin-top: 0; width: auto; float: none; padding: 0 15px; text-align: left; }
   .site-footer-inner { padding: 0 45px; }
   .page-title { font-size: 39px; }
   .term-description h2 { font-size: 31px; }
   .term-description h3 { font-size: 25px; }
   .shop-grid--columns-3 > .shop-item { width: 33.333%; }
+  .shop-item__title { font-size: 16px; }
+  .shop-item__buttons { flex-direction: row; }
+  .shop-item__buttons a { padding: 7.2px 21.6px; font-size: 14.4px; border-radius: 21.6px; }
+  .woocommerce-result-count { font-size: 14.4px; }
+  .site-footer .copyright { display: block; }
+  .site-footer a { text-align: left; }
+  .site-footer .work-time { text-align: left; }
+  .site-footer .gorod { text-align: left; }
 }
 
 /* 992px+ */
@@ -464,7 +485,7 @@ strong { font-weight: 700; }
 
   <!-- Sorting -->
   <div class="shop-sorting">
-    <p class="woocommerce-result-count"> Показано товаров - 4</p>
+    <p class="woocommerce-result-count">Показано товаров - 4</p>
     <form class="woocommerce-ordering" method="get">
       <select name="orderby" class="orderby">
         <option value="menu_order" selected>Исходная сортировка</option>
@@ -618,7 +639,7 @@ strong { font-weight: 700; }
   <div class="footer-columns">
     <div>
       <div class="logo"><img src="https://de-pack.ru/wp-content/uploads/2024/06/logo_href.png" alt="De-Pack"></div>
-      <div class="copyright">© 2026 Упаковочное оборудование и материалы «Де-Пак»</div>
+      <div class="copyright">&copy; 2026 Упаковочное оборудование и материалы «Де-Пак»</div>
     </div>
     <div>
       <div class="h2-header"><a href="#">Каталог упаковочного оборудования</a></div>
