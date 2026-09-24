@@ -25,7 +25,7 @@ li { margin-bottom: 8px; }
 strong { font-weight: 700; }
 
 /* === FIXED CONTAINER === */
-.fixed { max-width: 720px; margin: 0 auto; padding: 0 15px; }
+.fixed { margin: 0 auto; padding: 0 15px; }
 
 /* === HEADER === */
 .site-header {
@@ -365,7 +365,6 @@ strong { font-weight: 700; }
 
 /* 576px+ */
 @media (min-width: 576px) {
-  .fixed { max-width: 960px; padding: 0 20px; }
   .site-content { padding: 0 20px 20px; }
   .site-header-inner { padding: 0 20px; }
   .site-footer-inner { padding: 0 20px; }
@@ -374,7 +373,6 @@ strong { font-weight: 700; }
 /* 768px+ */
 @media (min-width: 768px) {
   body { font-size: 16px; }
-  .fixed { max-width: 960px; padding: 0 45px; }
   .site-content { padding: 0 45px 40px; }
   .site-header-inner {
     display: flex;
@@ -390,31 +388,24 @@ strong { font-weight: 700; }
   .page-title { font-size: 39px; }
   .term-description h2 { font-size: 31px; }
   .term-description h3 { font-size: 25px; }
+  .shop-grid--columns-3 > .shop-item { width: 33.333%; }
 }
 
 /* 992px+ */
 @media (min-width: 992px) {
-  .fixed { max-width: 960px; }
   .content-area {
     max-width: calc(100% - 300px);
     flex: 0 0 calc(100% - 300px);
     padding-right: 30px;
   }
-  .widget-area { display: block; padding-bottom: 30px; }
+  .widget-area { display: block; width: 300px; flex: 0 0 300px; padding-bottom: 30px; }
   .site-branding { padding-left: 0; }
-  .header-html-1, .header-html-2 { padding: 0 15px; text-align: left; }
-  .shop-grid--columns-3 > .shop-item { width: 50%; }
 }
 
 /* 1200px+ */
 @media (min-width: 1200px) {
-  .fixed { max-width: 1190px; }
   .content-area { padding-right: 70px; }
-}
-
-/* 1400px+ */
-@media (min-width: 1400px) {
-  .fixed { max-width: 1390px; }
+  .site-footer-inner { max-width: 1190px; }
 }
 </style>
 </head>
