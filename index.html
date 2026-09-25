@@ -1016,53 +1016,27 @@ var quick_view_ajax = {"url":"https://de-pack.ru/wp-admin/admin-ajax.php","nonce
 <script>
 // Minimal CookieYes consent handler for static page
 document.addEventListener('DOMContentLoaded', function() {
-    var banner = document.querySelector('.cky-consent-container');
-    var overlay = document.querySelector('.cky-overlay');
-    
-    function hideBanner() {
-        if (banner) banner.style.display = 'none';
-        if (overlay) overlay.style.display = 'none';
+    function hideAll() {
+        document.querySelectorAll('.cky-consent-container').forEach(function(el) { el.style.display = 'none'; });
+        document.querySelectorAll('.cky-overlay').forEach(function(el) { el.style.display = 'none'; });
+        document.querySelectorAll('.cky-modal').forEach(function(el) { el.style.display = 'none'; });
         document.cookie = 'cky-consent=active; path=/; max-age=31536000';
     }
     
-    // Accept button
-    var acceptBtn = document.querySelector('.cky-btn-accept');
-    if (acceptBtn) acceptBtn.addEventListener('click', hideBanner);
-    
-    // Reject button  
-    var rejectBtn = document.querySelector('.cky-btn-reject');
-    if (rejectBtn) rejectBtn.addEventListener('click', hideBanner);
-    
-    // Close button
-    var closeBtn = document.querySelector('.cky-btn-close');
-    if (closeBtn) closeBtn.addEventListener('click', function() {
-        var modal = document.querySelector('.cky-modal');
-        if (modal) modal.style.display = 'none';
+    document.addEventListener('click', function(e) {
+        var t = e.target;
+        if (t.classList.contains('cky-btn-accept') || t.classList.contains('cky-btn-reject') || t.classList.contains('cky-btn-preferences')) {
+            hideAll();
+        }
+        if (t.classList.contains('cky-btn-customize')) {
+            document.querySelectorAll('.cky-modal').forEach(function(el) { el.style.display = 'block'; });
+        }
+        if (t.classList.contains('cky-btn-close')) {
+            document.querySelectorAll('.cky-modal').forEach(function(el) { el.style.display = 'none'; });
+        }
     });
     
-    // Settings button
-    var settingsBtn = document.querySelector('.cky-btn-customize');
-    if (settingsBtn) settingsBtn.addEventListener('click', function() {
-        var modal = document.querySelector('.cky-modal');
-        if (modal) modal.style.display = 'block';
-    });
-    
-    // Check if already consented
-    if (document.cookie.indexOf('cky-consent=active') !== -1) {
-        hideBanner();
-    }
-    
-    // Detail accept button (in modal)
-    var detailAccept = document.querySelector('[data-cky-tag="detail-accept-button"]');
-    if (detailAccept) detailAccept.addEventListener('click', hideBanner);
-    
-    // Detail reject button
-    var detailReject = document.querySelector('[data-cky-tag="detail-reject-button"]');
-    if (detailReject) detailReject.addEventListener('click', hideBanner);
-    
-    // Detail save button
-    var detailSave = document.querySelector('[data-cky-tag="detail-save-button"]');
-    if (detailSave) detailSave.addEventListener('click', hideBanner);
+    if (document.cookie.indexOf('cky-consent=active') !== -1) hideAll();
 });
 </script>
 </body></html>
